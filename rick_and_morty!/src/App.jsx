@@ -6,6 +6,7 @@ import "./App.css";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import About from "./components/About.jsx";
 import Detail from "./components/Detail.jsx";
+import Favorites from "./components/Favorites.jsx";
 import Error from "./components/Erro.jsx";
 import Form from "./components/Form.jsx";
 
@@ -73,6 +74,7 @@ function App() {
       <Route path='/detail/:id' element={<Detail/>} />
       <Route path="*" element={<Error/>} />
       <Route path="/" element={<Form login={login}/>} />
+      <Route path="/favorites" element={<Favorites/>} />
       
     </Routes>
       
