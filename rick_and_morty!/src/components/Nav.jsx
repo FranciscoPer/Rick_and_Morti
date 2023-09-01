@@ -1,9 +1,19 @@
 import SearchBar from "./SearchBar"
-import { Link } from "react-router-dom"
+import { Link,  } from "react-router-dom"
 
-const Nav = ({onSearch}) => {
+const Nav = ({onSearch, setAcess}) => {
+  
+
+const handleLogOut = () => {
+  setAcess(false);
+  
+
+
+}
+
   return(
     <nav>
+      <button onClick={handleLogOut}>LOG OUT </button>
     <SearchBar onSearch={onSearch}/>
 
     <button>

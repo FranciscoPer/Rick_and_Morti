@@ -7,7 +7,7 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import About from "./components/About.jsx";
 import Detail from "./components/Detail.jsx";
 import Favorites from "./components/Favorites.jsx";
-import Error from "./components/Erro.jsx";
+import Error from "./components/Error.jsx";
 import Form from "./components/Form.jsx";
 
 
@@ -61,7 +61,7 @@ function App() {
 
       {
         location.pathname !== '/'
-        ? <Nav onSearch={onSearch}/>
+        ? <Nav onSearch={onSearch} setAcess={setAcess}/>
         : null
 
       }
