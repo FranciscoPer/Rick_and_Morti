@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import "./Detail.css";
 
 
 
@@ -22,14 +23,19 @@ const Detail = () => {
 
 
     return(
-     <div> 
-          <h2>{character?.name}</h2>
-          <h2>{character?.status}</h2>
-          <h2>{character?.species}</h2>
-          <h2>{character?.origin?.name}</h2>
-          <h2><img src={character?.image} alt={character.name} /></h2>
-     </div>
-
+      
+      <div className="detail-card">
+  <div className="detail-image">
+    <img src={character?.image} alt={character?.name} />
+  </div>
+  <div className="detail-info">
+    <h2>{character?.name}</h2>
+    <h2>{character?.status}</h2>
+    <h2>{character?.species}</h2>
+    <h2>{character?.origin?.name}</h2>
+  </div>
+</div>
+ 
     )
 }
 

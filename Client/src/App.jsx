@@ -39,7 +39,7 @@ function App() {
 
   useEffect(() => {
     !access && navigate('/');
-  }, [access])
+  }, [access, navigate])
 
   const onSearch = async (id) => {
     try {
@@ -61,21 +61,35 @@ function App() {
       character.id !== +id)
     setCharacters(charactersFiltered)
   }
+  let backgroundClass = '';
+
+  // Verificamos la ruta actual y asignamos la clase adecuada
+  if (location.pathname === '/home') {
+    backgroundClass = 'home-bg';
+  } else if (location.pathname === '/') {
+    backgroundClass = 'about-bg';
+  }
+  if (location.pathname.includes('/detail/')) {
+    backgroundClass = 'home-bg';
+  }
+  if (location.pathname.includes('/favorites')) {
+    backgroundClass = 'home-bg';
+  }
   
 
   return (
-    <div className="App">
+    <div className={`App ${backgroundClass}`}>
       {
         location.pathname !== '/'
         ? <Nav onSearch={onSearch} setAccess={setAccess} /> // Corregí setAcess a setAccess
         : null
       }
       <Routes>
-        <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
+        <Route path='/home' element={<Cards characters={characters} onClose={onClose}  />} />
         <Route path='/about' element={<About />} />
         <Route path='/detail/:id' element={<Detail />} />
         <Route path="*" element={<Error />} />
-        <Route path="/" element={<Form login={login} />} />
+        <Route path="/"  element={<Form login={login} />} />
         <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </div>

@@ -1,0 +1,89 @@
+.navBar {
+  font-family: Cinzel, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.buttonGroup {
+  font-family: Cinzel, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px; 
+}
+
+button {
+  font-family: Cinzel, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border: orange;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+/* Si deseas separar el botón de cerrar sesión */
+button:first-child {
+  margin-right: auto;
+  margin-left: 20px;
+}
+.logOutButton {
+  font-family: Cinzel, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: orange;
+  padding: 10px 20px;
+  border: 2px  orange; /* Puede que quieras definir un borde en lugar de solo el color */
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.logOutButton:hover {
+  background-color: orange;
+}
+
+button:first-child,
+.logOutButton:first-child {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.searchbar{
+  font-family: Cinzel, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid orange; /* Puede que quieras definir un borde en lugar de solo el color */
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.searchbar:hover {
+  background-color: orange;
+}
+
+button:first-child,
+.logOutButton:first-child {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.centerContainer {
+  margin-top: 20px; /* Puedes ajustar este valor */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

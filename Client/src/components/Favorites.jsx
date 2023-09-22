@@ -1,7 +1,11 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
 import Card from "./Card";
 import { connect, useDispatch} from "react-redux";
 import { filterCards, orderCards } from "../redux/actions";
 import { useState } from "react";
+import "./card.css";
 
 
 const Favorites = ({myFavorites}) => {
@@ -39,6 +43,7 @@ const Favorites = ({myFavorites}) => {
         {
             myFavorites?.map(fav => {
                 return (
+                    
                     <Card
                     key={fav.id}
                     id={fav.id}

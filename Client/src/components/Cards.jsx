@@ -1,8 +1,13 @@
+/* eslint-disable react/prop-types */
 import Card from "./Card";
+import "./Card.css";
+
+
+
 
 export default function Cards({ characters, onClose }) {
   return (
-    <div>
+    <div className="cards-wrapper">
       {characters.map(({id, name, status,  species, gender, origin,  image}) => {
         return (
           <Card
@@ -15,6 +20,7 @@ export default function Cards({ characters, onClose }) {
            gender={gender}
            origin={origin.name}
            image={image}
+           className = "card"
            
 
           

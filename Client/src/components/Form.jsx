@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import "./Form.css";
 import { useState } from "react";
 import validation from "./Validation";
 const Form = ({ login }) => {
@@ -31,8 +33,8 @@ const Form = ({ login }) => {
 
 
         return(
-
-
+<div className="main-container">
+<div className="form-container">
         <form onSubmit={handleSubmit}>
           
             <label htmlFor="email" > EMAIL  </label>
@@ -47,6 +49,8 @@ const Form = ({ login }) => {
 
       
         </form>
+        </div>
+        </div>
 
     )
 }

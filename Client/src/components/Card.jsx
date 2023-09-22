@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react-refresh/only-export-components */
 import { Link } from "react-router-dom";
 import {addFav, removeFav} from '../redux/actions'
 import { connect } from 'react-redux'
 import { useState, useEffect } from "react";
+import "./Card.css";
 
 function Card({id, name, status,  species, gender, image, onClose, addFav, removeFav, myFavorites}) {
 
@@ -26,30 +29,36 @@ function Card({id, name, status,  species, gender, image, onClose, addFav, remov
           setIsFav(true);
        }
     });
- }, [myFavorites]);
+ }, [id, myFavorites]);
+
+ const cardStyle = {
+  backgroundImage: `url(${image})`, // Establecer imagen como fondo
+};
+ 
 
   return (
-    <div>
+    <div className="card" style={cardStyle}>
 
   {
    isFav 
    ? (
-      <button onClick={handleFavorite}>❤️</button>
+      <button className="corazon" onClick={handleFavorite}>❤️</button>
    ) : (
       <button onClick={handleFavorite}>🤍</button>
    )
   }
+  
 
-    <button onClick={() => onClose(id)}>X</button>
+    <button className="botonx" onClick={() => onClose(id)}>X</button>
     <Link to={`/detail/${id}`}>
-    <h2>{name}</h2>
+    <h2 style={{ color: "white", WebkitTextStroke: "1px black" }}>{name}</h2>
     </Link>
   
     <h2>{species}</h2>
     <h2>{gender}</h2>
     <h2>{status}</h2>
-    <h2>{origin}</h2>
-    <img src={image} alt="" />
+    
+    
     
     </div>
   );

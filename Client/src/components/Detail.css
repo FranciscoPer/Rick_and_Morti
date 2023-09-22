@@ -1,0 +1,27 @@
+.detail-card {
+    
+    display: flex;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgba(255, 165, 0, 0.1);  /* Un tono naranja suave */
+  }
+  
+  .detail-image img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin-right: 20px;
+  }
+  
+  .detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .detail-info h2 {
+    margin: 5px 0;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+  }

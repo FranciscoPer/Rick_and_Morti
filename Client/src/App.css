@@ -1,3 +1,26 @@
 .App {
    text-align: center;
+   
 }
+
+.home-bg {
+   background-image: url(https://images5.alphacoders.com/125/1259528.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; /* Asegúrate de que la imagen no se repita */
+   width: 100%;
+   min-height: 100vh; /* Usar min-height en lugar de height para permitir que crezca */
+  
+  
+}
+
+.about-bg {
+   background-image: url(https://images8.alphacoders.com/107/1075646.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; /* Asegúrate de que la imagen no se repita */
+   width: 100%;
+   min-height: 100vh; /* Usar min-height en lugar de height para permitir que crezca */
+   
+  }
+

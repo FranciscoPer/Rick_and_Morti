@@ -1,0 +1,38 @@
+
+  
+  
+
+  .agregar{
+    font-family: Cinzel, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: black;
+    color: orange;
+    padding: 10px 20px;
+    border: 2px  orange; /* Puede que quieras definir un borde en lugar de solo el color */
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover,
+  .agregar:hover {
+    background-color: orange;
+  }
+  
+  button:first-child,
+  .agregar:first-child {
+    margin-right: auto;
+    margin-left: 20px;
+  }
+  .searchbar{
+    font-family: Cinzel, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    
+    color: orange;
+    padding: 10px 20px;
+    border: 2px solid orange; /* Puede que quieras definir un borde en lugar de solo el color */
+    border-radius: 9999px;
+    
+
+
+  }
+  .agregar{
+    margin-left: 20px;
+  }
